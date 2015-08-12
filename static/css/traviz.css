@@ -1,0 +1,75 @@
+body {
+    color: #333;
+}
+
+#layout {
+    position: relative;
+    padding-left: 0;
+}
+
+.wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+.pagination {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.content {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 1.6em;
+}
+
+header h1 {
+  color: #999;
+  margin: 0.2em 0 1em;
+  font-size: 2.5em;
+  font-weight:100;
+  letter-spacing:0.1em;
+}
+
+.TRAViz-copyright-link {
+	z-index: 100;
+	position: relative;
+	margin-top: -60px;
+	float: right;
+}
+
+.TRAViz-copyright {
+	width: 232px;
+	height: 50px;
+	background-image: url(images/cr.png);
+}
+
+.unlink {
+	width: 23px;
+	height: 16px;
+	background:#FFFFFF url(images/unlink.png) no-repeat;
+	cursor: pointer;
+}
+
+.button-question {
+  background-color: white;
+  background: white;
+  border-radius: 4px;
+  padding: 10px 15px;
+  display: inline-block;;
+  border:none;
+  cursor: hand;
+  cursor: pointer;
+}
+
+.button-question:focus {
+  outline:0;
+}
+
+footer {
+  text-align: center;
+  font-size: 2em;
+  border-top:1px solid #eee;
+  padding: 1.0em 1.0em 1em 0.5em;
+}

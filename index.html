@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Grimm's Little Red Riding Hood</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script src="static/js/traviz-min.js"></script>
+  <link rel="stylesheet" type="text/css" href="static/css/traviz.css"></link>
+  <script src="static/js/grimms.js"></script>
+  <style type="text/css" media="screen">
+      body { font-family: 'Georgia'; color: #999;}
+  </style>
+</head>
+    <body>
+        <div id="layout">
+
+<!--  -->
+       <div class="wrap">
+        <header>
+            <h1 style="text-align:center;">Grimm's Little Red Riding Hood</h1>
+        </header>
+            <footer>
+            <div class="pagination pure-g">
+                <button class="button-question pure-u-1-2" id="previous" onclick="prevPar()"><i class="fa fa-angle-left"></i></button>
+                <button class="button-question pure-u-1-2" id="next" onclick="nextPar()"><i class="fa fa-angle-right"></i></button>
+           </div>
+       </footer>
+        <div id="TRAVizContainerDiv"></div>
+        <footer>
+        <div class="pagination pure-g">
+            <button class="button-question pure-u-1-2" id="previous" onclick="prevPar()"><i class="fa fa-angle-left"></i></button>
+            <button class="button-question pure-u-1-2" id="next" onclick="nextPar()"><i class="fa fa-angle-right"></i></button>
+       </div>
+       </footer>
+        <script type="text/javascript">
+        var paragraph = 1;
+
+        function show(paragraph) {
+            var traviz = new TRAViz("TRAVizContainerDiv");
+            traviz.align(grimms[paragraph]);
+            traviz.visualize();
+        };
+
+        show(paragraph);
+
+        function nextPar() {
+              paragraph = paragraph + 1;
+              if (paragraph === 8) {
+                  paragraph = 1;
+              }
+              show(paragraph);
+        }
+
+        function prevPar() {
+              paragraph = paragraph - 1;
+              if (paragraph === 0) {
+                  paragraph = 7;
+              }
+              show(paragraph);
+        }
+
+        </script>
+    </div>
+</div>
+    </body>
+
+</html>
