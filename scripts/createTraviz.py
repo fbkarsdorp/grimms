@@ -1,6 +1,7 @@
 import json
 import os
 import cgi
+from pattern.de import tokenize
 
 def unicodeToHTMLEntities(text):
     """Converts unicode to HTML entities.  For example '&' becomes '&amp;'."""
@@ -13,7 +14,7 @@ def make_json_table():
     for paragraph in range(1, len(texts[0])):
         table = []
         for i, text in enumerate(texts):
-            table.append({"edition": "Edition of " + years[i].replace(".txt", ""), "text": text[paragraph]})
+            table.append({"edition": "Edition of " + years[i].replace(".txt", ""), "text": ' '.join(tokenize(text[paragraph]))})
         tables[paragraph] = table
     return tables
 

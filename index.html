@@ -39,7 +39,7 @@
         var paragraph = 1;
 
         function show(paragraph) {
-            var traviz = new TRAViz("TRAVizContainerDiv");
+            var traviz = new TRAViz("TRAVizContainerDiv", {normalize: false, baseColor: '#999'});
             traviz.align(grimms[paragraph]);
             traviz.visualize();
         };
